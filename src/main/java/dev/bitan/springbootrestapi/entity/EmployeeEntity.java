@@ -1,19 +1,18 @@
-package dev.bitan.springbootrestapi.model;
+package dev.bitan.springbootrestapi.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-
-public class Employee {
+@Entity
+@Table(name = "tbl_employee")
+public class EmployeeEntity {
+    @Id
     private String employeeId;
     private String firstName;
     private String lastName;
     private String emailId;
-
-//    @JsonIgnore
     private String department;
-
-
 
     public String getEmployeeId() {
         return employeeId;
